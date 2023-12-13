@@ -7,7 +7,7 @@ const shost = 'bpbzooyb0hdwe3yri4x1-mysql.services.clever-cloud.com';
 */
 const bdName  = 'SistemaAtencionMedica';
 const user = 'root';
-const password = '';
+const password = 'Tortuga77';
 const shost = 'localhost';
 
 const dbConn = new Sequelize(bdName, user, password, {host: shost, dialect:"mariadb"});
