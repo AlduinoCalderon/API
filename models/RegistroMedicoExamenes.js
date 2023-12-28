@@ -1,8 +1,7 @@
-
 const { DataTypes } = require('sequelize');
 const db = require('../database/conecta');
 
-const RegistroMedicoExamenes = db.define('RegistroMedicoExamenes', {
+const RegistroMedicoExamenes = db.define('RegistrosMedicosExamenes', {
     PacienteID: {
         type: DataTypes.CHAR(7),
         allowNull: false

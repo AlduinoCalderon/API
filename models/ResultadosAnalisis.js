@@ -21,7 +21,7 @@ const AnalisisResultados = db.define('AnalisisResultados', {
             key: 'id'
         }
     },
-    estado: {
+    Estado: {
         type: DataTypes.TINYINT,
         defaultValue: 0
     }

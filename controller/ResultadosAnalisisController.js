@@ -5,7 +5,7 @@ const ResultadosAnalisisModel = require('../models/ResultadosAnalisis');
 const getResultadosAnalisis = async (req, resp = response) => {
     try {
         const resultadosAnalisis = await ResultadosAnalisisModel.sequelize.query(
-            'SELECT * FROM AnalisisResultados WHERE estado = 1',
+            'SELECT * FROM AnalisisResultados WHERE Estado = 1',
             { type: QueryTypes.SELECT }
         );
         resp.json(resultadosAnalisis);
@@ -67,7 +67,7 @@ const deleteResultadoAnalisis = async (req, resp = response) => {
         if (!resultadoAnalisis) {
             return resp.status(404).json({ mensaje: 'Resultado de análisis no encontrado' });
         }
-        await resultadoAnalisis.update({ estado: false });
+        await resultadoAnalisis.update({ Estado: 0 });
         resp.json(resultadoAnalisis);
     } catch (error) {
         console.error(error);

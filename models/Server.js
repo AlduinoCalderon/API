@@ -12,6 +12,7 @@ class Server{
         //this.routes();
         this.app.use('/ValoresNormales', require('../routes/ValoresNormales'));
         this.app.use('/ResultadoAnalisis', require('../routes/ResultadosAnalisis'));
+        //this.app.use('/VistaResultados', require('../routes/VistaResultados'));
         this.app.use('/RegistroMedicoExamenes', require('../routes/RegistroMedicoExamenes'));
     }
 
