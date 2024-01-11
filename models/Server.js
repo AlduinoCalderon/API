@@ -9,10 +9,8 @@ class Server{
         this.dbConnection();
         this.middleware();
 
-        //this.routes();
-        this.app.use('/ValoresNormales', require('../routes/ValoresNormales'));
-        this.app.use('/ResultadoAnalisis', require('../routes/ResultadosAnalisis'));
-        this.app.use('/RegistroMedicoExamenes', require('../routes/RegistroMedicoExamenes'));
+        this.app.use('/MedEsp', require('../routes/MedEsp'));
+        this.app.use('/Medicos', require('../routes/Medicos'));
     }
 
     async dbConnection(){
@@ -34,7 +32,7 @@ class Server{
     }
     listen(){
         this.app.listen(this.port, () => {
-            console.log('Escuchando en puerto', this.port);
+            console.log('Escuchando en el puerto', this.port);
         });
     }
 }
