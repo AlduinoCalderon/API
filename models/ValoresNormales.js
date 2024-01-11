@@ -11,3 +11,5 @@ const ValoresNormales = db.define('ValoresNormales', {
 });
 
 module.exports = ValoresNormales;
+
+

@@ -1,5 +1,4 @@
-// models/VistaResultados.js
-const { DataTypes } = require('sequelize');
+const { Sequelize, DataTypes } = require('sequelize');
 const db = require('../database/conecta');
 
 const VistaResultados = db.define('VistaResultados', {
@@ -19,10 +18,20 @@ const VistaResultados = db.define('VistaResultados', {
     type: DataTypes.STRING(25),
     allowNull: false,
   },
+  ValorMinimo: {
+    type: DataTypes.STRING(25),
+    allowNull: false,
+  },
+  ValorMaximo: {
+    type: DataTypes.STRING(25),
+    allowNull: false,
+  },
   RangoNormal: {
     type: DataTypes.STRING(25),
     allowNull: false,
   },
+}, {
+  tableName: 'VistaResultados',
+  timestamps: false,
 });
-
 module.exports = VistaResultados;
